@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RoomData</string>
+    <string name="zagol">Заголовок</string>
+    <string name="opisannie">Описание</string>
+    <string name="save">save</string>
+    <string name="dobav">Добавить</string>
+</resources>
