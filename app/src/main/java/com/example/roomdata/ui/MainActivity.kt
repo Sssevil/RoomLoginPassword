@@ -41,10 +41,11 @@ class MainActivity : AppCompatActivity(),Help {
         return super.onOptionsItemSelected(item)
     }
 
+
     override fun itemClick(data: EtData) {
+        db?.getDao()?.delete(data)
         val newData=db?.getDao()?.getAllData()
         if(newData!=null)
             adapter?.update(newData)
-
     }
 }

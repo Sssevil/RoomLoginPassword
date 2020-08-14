@@ -9,5 +9,9 @@ class ViewHolder(view: View):RecyclerView.ViewHolder(view) {
     fun bind(etData:EtData,listener:Help){
         itemView.txt.text=etData.etOne
         itemView.txt0.text=etData.etTwo
+
+        itemView.btnDelete.setOnClickListener {
+            listener.itemClick(etData)
+        }
     }
 }
