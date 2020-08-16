@@ -1,9 +1,6 @@
 package com.example.roomdata.data
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 
@@ -15,4 +12,10 @@ interface EtDao {
     fun getAllData():List<EtData>
     @Delete
     fun delete(data:EtData)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun addUser(user:LoginData)
+    @Query("Select * from LoginData where login=:loginTxt and password=:passTxt")
+    fun getUser(loginTxt:String,passTxt:String):LoginData
+    @Query("select * from LoginData")
+    fun getAllUsers():List<LoginData>
 }

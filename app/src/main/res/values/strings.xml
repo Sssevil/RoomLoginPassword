@@ -4,4 +4,7 @@
     <string name="opisannie">Описание</string>
     <string name="save">save</string>
     <string name="dobav">Добавить</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="enter">Enter</string>
 </resources>
